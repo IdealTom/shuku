@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@color/little_grey">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_gr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="@color/colorPink"
+            android:layout_marginBottom="100dp"/>
+        <Button
+            android:id="@+id/btu_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/bg_start"
+            android:text="开始计算"
+            android:textColor="@color/colorDeepBlue" />
+        <Button
+            android:id="@+id/btu_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_start"
+            android:text="清空"
+            android:textColor="@color/colorDeepBlue" />
+        <TextView
+            android:id="@+id/tv_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="23dp"
+            android:layout_toRightOf="@id/btu_start"
+            android:layout_toLeftOf="@id/btu_clear"
+            android:textSize="26sp"
+            android:text="未完成"/>
+
+        <TextView
+            android:id="@+id/tv_lenOfResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/main_gr"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="-40dp"
+            android:layout_centerHorizontal="true"
+            android:text="发现0个结果"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/index"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_below="@id/tv_lenOfResults"
+            android:layout_marginTop="50dp"
+            android:textSize="80sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:layout_centerHorizontal="true"
+            android:text="0" />
+        <ImageButton
+            android:id="@+id/left_arrows"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_alignTop="@id/tv_lenOfResults"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="25dp"
+            android:scaleType="fitCenter"
+            android:background="@color/little_grey"
+        android:src="@mipmap/left_ar" />
+        <ImageButton
+            android:id="@+id/right_arrows"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="25dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitCenter"
+            android:background="@color/little_grey"
+            android:layout_alignTop="@id/tv_lenOfResults"
+            android:src="@mipmap/right"/>
+
+
+    </RelativeLayout>
+</ScrollView>
